@@ -1,0 +1,12 @@
+def divisor(n):
+    s = list()
+    for i in range(1,11):
+        if(n%i==0):
+            s.append(i)
+
+    print(max(s))    
+
+
+
+n = int(input().strip())
+result = divisor(n)
