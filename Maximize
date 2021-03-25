@@ -1,0 +1,20 @@
+import sys
+try:    
+    def maximize(x,y,z):
+        return (abs(x-y)+ abs(y-z)+ abs(z-x))
+
+    def triplets(arr):
+        arr = sorted(arr)
+        maxsum = maximize(arr[0],arr[1],arr[len(arr)-1])
+        print(maxsum)
+      
+    T = int(input().strip())
+    for i in range(T):
+        n = int(input().strip())
+        arr = list(map(int, sys.stdin.readline().strip().split()))
+        result = triplets(arr)
+    
+    
+except:
+    print("Failed")
+    pass
