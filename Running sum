@@ -1,0 +1,8 @@
+def Running(nums):
+    sums = list()
+    for i in range(1,len(nums)+1):
+        sums.append(sum(nums[:i]))
+    print(sums)
+
+nums = list(map(int,input().strip().split()))
+result = Running(nums)
