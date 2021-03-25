@@ -1,0 +1,16 @@
+def Solution(extraCandies,candies):
+    arr = list()
+    for i in range(len(candies)):
+        if(candies[i]+extraCandies >= max(candies)):
+            arr.append(1)
+        else:
+            arr.append(0)    
+    print(arr)
+    return arr        
+
+
+
+candies = list(map(int, input().strip().split()))
+extraCandies = int(input().strip())
+result = Solution(extraCandies,candies)
+print(result)
