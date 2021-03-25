@@ -1,0 +1,40 @@
+from typing import Counter
+from collections import Counter
+
+
+# str1 = "hello"
+# str2 = "gelloworld"
+# str3 = "mello"
+# dict1 = Counter(str1)
+# dict2 = Counter(str2)
+# dict3 = Counter(str3)
+# print(dict1)
+# print(dict2)
+# commondict = dict1&dict2
+# print(commondict)
+# print(len(commondict))
+# commonchars = sorted(list(commondict.elements()))
+# print(commonchars)
+
+
+
+def Chars(strings):
+    dict1 = None
+    dict2 = None   
+    for i in range(len(strings)-1):
+        dict1 = Counter(strings[i])
+        dict2 = Counter(strings[i+1])
+        commondict = dict1&dict2
+        temp = Counter(strings[0])&Counter(strings[1])
+        if(len(temp&commondict)!=0):
+            continue
+        else:
+            print(-1)
+            return -1
+
+    final = temp&commondict    
+    commonchars = sorted(list(final.elements()))
+    print(commonchars)
+
+strings = ["bbcbdbd", "bacbdbdb", "abcdddac"]
+result = Chars(strings)
