@@ -1,0 +1,14 @@
+def firstIndexB(a,x,si):
+    l = len(a)
+    if(si == l):
+        return -1
+
+    if(a[si]==x):
+        return si
+
+    smallerListoutput = firstIndexB(a,x,si+1) 
+
+    return smallerListoutput
+
+a = [1,2,3,4,5,6,7]
+print(firstIndexB(a,4,0))           
