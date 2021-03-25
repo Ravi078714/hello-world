@@ -1,0 +1,28 @@
+# first have to take input for 
+# - number of test cases
+# - the size of square array
+# - the 2D array
+
+T = int(input().strip())
+for _ in range(T):
+    N = int(input().strip())
+    matrix = list()
+    for i in range(N):
+        a = list(map(int, input().strip().split()))
+        # m1 = max(a)
+        # print(m1)
+        matrix.append(a)
+
+
+    print(matrix)
+    cnt = 0
+    for i in range(N):
+        for j in range(N):
+            for p in range(N):
+                for q in range(N):
+                    if(i<=p and j<=q):
+                        if(matrix[i][j]>matrix[p][q]):
+                            cnt+=1
+    print(cnt)            
+
+     
