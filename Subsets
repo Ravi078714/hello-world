@@ -1,0 +1,47 @@
+
+# import itertools
+# import time
+
+
+# def subsets(nums):
+#     start = time.time()
+#     maxsum = 0
+#     length = 0
+#     for l in range(0, n+1):
+#         for subset in itertools.combinations(nums, l):
+#             if(sum(list(subset))> maxsum):
+#                 length = len(subset)
+#                 maxsum = sum(list(subset))
+
+#     print(maxsum, length)
+#     end = time.time()
+#     print(end-start)
+
+
+# n = int(input().strip())
+# nums = list(map(int, input().split()))
+# result = subsets(nums)
+
+
+##########  Second method the faster and easier one ############
+
+
+n = int(input().strip())
+nums = list(map(int, input().split()))
+
+# counting the  number of integers aadded
+cnt = 0
+# sum  of all positive integers
+s = 0
+
+for i in nums:
+    if(i>0):
+        s+=i
+        cnt+=1
+
+if(cnt == 0):
+    s = max(nums)
+
+print(s, cnt)            
+
+
