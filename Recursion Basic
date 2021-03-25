@@ -1,0 +1,38 @@
+def sum(n):
+    if(n==0):
+        return 0
+
+    out = sum(n-1) + n
+    return out
+###############################
+def print_1_to_n(n):
+    if(n==0):
+        return
+    print_1_to_n(n-1)
+    print(n)   
+    return
+
+##############################
+
+def print_n_to_1(n):
+    if(n==0):
+        return
+    print(n)    
+    print_n_to_1(n-1)    
+
+############################
+
+def fib(n):
+    if(n==1 or n==2):
+        return 1
+    a = fib(n-1)
+    b = fib(n-2)    
+    out = a + b
+    return out  
+        
+#############################
+import sys
+sys.setrecursionlimit(2000)                       # increasing system recursion limit
+
+n = int(input())
+print(fib(n))      # fibonacii
