@@ -1,0 +1,12 @@
+
+testcase = int(input().strip())
+for _ in range(testcase):
+    n,k = map(int,input().strip().split())
+    l = list(map(int,input().strip().split()))
+    r = k%n
+    
+    # here in print first the arr part which is gonna be moved forward
+    # is selected and at the end of it the part which is gonna be 
+    # moved backward is joined.
+    
+    print(*(l[n-r:]+l[:n-r]))
