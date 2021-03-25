@@ -1,0 +1,23 @@
+
+def findErrorNums(nums):
+    counts = dict()
+    ans = list()
+
+    nums = sorted(nums)
+
+    for integer in nums:
+        counts[integer] = counts.get(integer, 0) + 1
+
+    for k,v in counts.items():
+        if(v == 2):
+            ans.append(k)
+
+    for i in range(len(nums)):
+        if i+1 not in nums:
+            ans.append(i+1)
+
+    print(ans)             
+
+
+nums = [2,2]
+result = findErrorNums(nums)
