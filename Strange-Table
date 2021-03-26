@@ -1,0 +1,46 @@
+
+# input the 2d array and initialize in two different ways 
+# first is column wise and second row wise
+t = int(input().strip())
+for _ in range(t):
+    n,m,x = map(int,input().strip().split())
+
+# n = rows, m = columns, x = to find the index of this number
+
+    r = None
+    q = None
+    row =None
+    col = None
+    result = None
+# when the rows are n
+# if r= 1 then row =0    r = x%n
+# if r =2 then row = 1
+# if r = 0 then row = n-1
+    r = x%n
+    if(r!=0):
+        row = r-1
+    else:    
+        row = n-1    
+    
+# for column 
+# if r != 0 i.e., the row is between 1 to n 
+# here we will use q = x/n
+# if q = 0 then col = 0
+# if q = 1 then col = 1
+# upto q = m-1 then col = m-1
+# when r = 0 :
+# then if q = 1 then col = 0
+# if q = 2 then col = 1
+# upto q = m then col = m-1
+
+    if(r!=0):
+        q = int(x/n)
+        col = q
+    else:
+        q = int(x/n)
+        col = q-1
+
+    result = (row*m) + (col+1)
+
+# print(row, col)        
+    print(result)
